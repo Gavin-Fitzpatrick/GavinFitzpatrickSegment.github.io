@@ -30,6 +30,7 @@
     <br><br>
     <input name="submit" type="submit" value="submit"/>
 </form> 
+<button type="button" onclick="Track">Track</button>
 
     
     <script type="text/javascript">
@@ -73,6 +74,29 @@
                 //analytics.reset();
             });
           }
+        function Track(){
+            var oProduct = {
+              properties: {
+                brand: "Hasbro",
+                cart_id: "skdjsidjsdkdj29j",
+                category: "Games",
+                coupon: "MAYDEALS",
+                image_url: "https://www.example.com/product/path.jpg",
+                name: "Monopoly: 3rd Edition",
+                position: 3,
+                price: 18.99,
+                product_id: "507f1f77bcf86cd799439011",
+                quantity: 1,
+                sku: "G-32",
+                url: "https://www.example.com/product/path",
+                variant: "200 pieces"
+              }
+            };
+            analytics.track('Order Completed', oProduct, function() {
+                form.reset();
+                //analytics.reset();
+            });
+        }
     </script>
 
 </body> 
