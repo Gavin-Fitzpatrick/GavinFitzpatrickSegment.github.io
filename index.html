@@ -75,12 +75,8 @@
             });
           }
         function Track(){
-            analytics.identify('kGhGdnkNWwxKAbkEJ');
-            analytics.track("Purchase",{
-                anonymousId: "e9eb878c-8215-4a64-988e-36a3b34035a9",
-                event: 'Purchase',
-                userId: "kGhGdnkNWwxKAbkEJ",
-                context:{
+            analytics.identify('kGhGdnkNWwxKAbkEJ',{ anonymousId: "e9eb878c-8215-4a64-988e-36a3b34035a9"});
+            analytics.track("Purchase",{},{context:{
                     traits:{
                         address:{ city: "Seattle", country: "US", postalCode: "98108", state: "WA", street: "6401 Flora Avenue South" },
                         email: "johannes.ariens@gmail.com",
@@ -98,8 +94,7 @@
                     page:{
                         url: 'https://segment.com/docs/connections/sources/catalog/librariesnode',
                     },
-                    "userAgent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; Mozilla/5.0, Google-AdWords-Express) Chrome/94.0.4606.81 Safari/537.36 "
-                }
+                    "userAgent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; Mozilla/5.0, Google-AdWords-Express) Chrome/94.0.4606.81 Safari/537.36 "}
             });
         }
     </script>
