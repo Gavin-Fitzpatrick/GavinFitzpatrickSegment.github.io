@@ -75,23 +75,32 @@
             });
           }
         function Track(){
-            analytics.identify('kGhGdnkNWwxKAbkEJ', {
+            analytics.identify('kGhGdnkNWwxKAbkEJ');
+            analytics.track("Purchase",{
                 anonymousId: "e9eb878c-8215-4a64-988e-36a3b34035a9",
-                address:{ city: "Seattle", country: "US", postalCode: "98108", state: "WA", street: "6401 Flora Avenue South" },
-                email: "johannes.ariens@gmail.com",
-                firstName: "Johannes",
-                lastName: "Ariens", 
-                plan: "monthly", 
-                price: "299.00", 
-                segmentAnonymousId: "e9eb878c-8215-4a64-988e-36a3b34035a9", 
+                event: 'Purchase',
                 userId: "kGhGdnkNWwxKAbkEJ",
-                utm: [
-                    { name: "source", value: "trustpilot" }, 
-                     { name: "campaign", value: "logo click" }, 
-                    { name: "medium", value: "company profile" }], 
-                value: 299 
+                context:{
+                    traits:{
+                        address:{ city: "Seattle", country: "US", postalCode: "98108", state: "WA", street: "6401 Flora Avenue South" },
+                        email: "johannes.ariens@gmail.com",
+                        firstName: "Johannes",
+                        lastName: "Ariens", 
+                        plan: "monthly", 
+                        price: "299.00", 
+                        segmentAnonymousId: "e9eb878c-8215-4a64-988e-36a3b34035a9", 
+                        utm: [
+                            { name: "source", value: "trustpilot" }, 
+                            { name: "campaign", value: "logo click" }, 
+                            { name: "medium", value: "company profile" }], 
+                        value: 299 
+                    },
+                    page:{
+                        url: 'https://segment.com/docs/connections/sources/catalog/librariesnode',
+                    },
+                    "userAgent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; Mozilla/5.0, Google-AdWords-Express) Chrome/94.0.4606.81 Safari/537.36 "
+                }
             });
-            analytics.track("Purchase");
         }
     </script>
 
