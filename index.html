@@ -75,26 +75,26 @@
             });
           }
         function Track(){
-            analytics.identify('kGhGdnkNWwxKAbkEJ',{ anonymousId: "e9eb878c-8215-4a64-988e-36a3b34035a9"});
-            analytics.track("Purchase",{},{context:{
-                    traits:{
-                        address:{ city: "Seattle", country: "US", postalCode: "98108", state: "WA", street: "6401 Flora Avenue South" },
-                        email: "johannes.ariens@gmail.com",
-                        firstName: "Johannes",
-                        lastName: "Ariens", 
-                        plan: "monthly", 
-                        price: "299.00", 
-                        segmentAnonymousId: "e9eb878c-8215-4a64-988e-36a3b34035a9", 
-                        utm: [
-                            { name: "source", value: "trustpilot" }, 
-                            { name: "campaign", value: "logo click" }, 
-                            { name: "medium", value: "company profile" }], 
-                        value: 299 
+            analytics.track("Lead Created", {}, {
+                context: {
+                    "page": {
+                        "path": "/pruefen",
+                        "referrer": "",
+                        "search": "",
+                        "title": "fairesspiel.de - Jetzt Glücksspielverluste zurückholen",
+                        "url": "https://www.fairesspiel.de/pruefen"
                     },
-                    page:{
-                        url: 'https://segment.com/docs/connections/sources/catalog/librariesnode',
-                    },
-                    "userAgent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; Mozilla/5.0, Google-AdWords-Express) Chrome/94.0.4606.81 Safari/537.36 "}
+                    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36",
+                    "locale": "de-DE",
+                    "library": {
+                        "name": "analytics.js",
+                        "version": "next-1.31.2"
+                    }
+                },
+                "userId":"9e33a57c-438a-40cb-9548-c7ee699bd7ee",
+                "properties":{
+                    "value":5000
+                 }
             });
         }
     </script>
